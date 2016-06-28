@@ -28,11 +28,23 @@ public class Main {
         Playlist playlist1 = new Playlist("Recently played");
         Playlist playlist2 = new Playlist("Recently added");
 
+        playlist1.addSong(song1);
+        playlist1.addSong(song2);
+        playlist1.addSong(song3);
+        playlist2.addSong(song3);
+        playlist2.addSong(song4);
+        playlist2.addSong(song5);
+
         myUser.addPlaylist(playlist1);
         myUser.addPlaylist(playlist2);
 
+        playlist1.playAll();
+        playlist2.playAll();
+
         for(String p: myUser.getAllPlaylistNames())
             System.out.println(p);
+
+
 
     }
 }
